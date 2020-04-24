@@ -8,6 +8,11 @@ public class User {
     public User() {
     }
 
+    public User(String name, String dept) {
+        this.name = name;
+        this.dept = dept;
+    }
+
     public String getName() {
         return name;
     }
@@ -22,5 +27,11 @@ public class User {
 
     public void setDept(String dept) {
         this.dept = dept;
+    }
+
+    @Override
+    public String toString() {
+        return "{\"name\": \"" + this.getName() +
+                "\", \"dept\": \"" + this.getDept() + "\"}";
     }
 }
